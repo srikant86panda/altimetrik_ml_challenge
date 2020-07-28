@@ -44,9 +44,9 @@ Customers here are clustered according to their value from purchase history. Fir
 * **Units price & number of units purchased**
 Clustering with K-Means model with units price and frequency of the product based on customer purchases. Choosing number of cluster as 4 from Elbow method
 
-![number of clusters](image/Segmentation_Elbow.jpg)
+![number of clusters](https://github.com/srikant86panda/altimetrik_ml_challenge/blob/master/image/Segmentation_Elbow.jpg)
 
-![customer types](image/Segmentation.jpg)
+![customer types](https://github.com/srikant86panda/altimetrik_ml_challenge/blob/master/image/Segmentation.jpg)
 
 1. Customer Type 0 : These customers purchase few products with low price
 2. Customer Type 1 : These customers purchase more products with low price
@@ -55,11 +55,11 @@ Clustering with K-Means model with units price and frequency of the product base
 
 * RFM model: Used feature features recency, frequency, and monetary to cluster users based on their overall score.
 
-![Frequency_vs_Revenue](image/Frequency_vs_Revenue.jpg)
+![Frequency_vs_Revenue](https://github.com/srikant86panda/altimetrik_ml_challenge/blob/master/image/Frequency_vs_Revenue.jpg)
 
-![Recency_vs_Frequency](image/Recency_vs_Frequency.jpg)
+![Recency_vs_Frequency](https://github.com/srikant86panda/altimetrik_ml_challenge/blob/master/image/Recency_vs_Frequency.jpg)
 
-![Recency_vs_Revenue](image/Recency_vs_Revenue.jpg)
+![Recency_vs_Revenue](https://github.com/srikant86panda/altimetrik_ml_challenge/blob/master/image/Recency_vs_Revenue.jpg)
 
 1. Customer Type High-Value : These customers are frequent and monetary is high or recent with high frequency and monetary
 2. Customer Type Mid-Value : These customers are frequent with mid monetary and seen recent
@@ -69,10 +69,10 @@ Clustering with K-Means model with units price and frequency of the product base
 Using transaction data revingeal customer preferences and needs using doc2vec approach to model user top prefered prodcut description.
 Basically this approach can segment user in to cluster with similar kind of purchase preference from history.
 **User Embedding**
-![doc2vec_user_embedding](image/doc2vec_embedding.jpg)
+![doc2vec_user_embedding](https://github.com/srikant86panda/altimetrik_ml_challenge/blob/master/image/doc2vec_embedding.jpg)
 
 e.g. of user segmented:
-![doc2vec_user_embedding](image/doc2vec_segments.jpg)
+![doc2vec_user_embedding](https://github.com/srikant86panda/altimetrik_ml_challenge/blob/master/image/doc2vec_segments.jpg)
 
 #### Customer purchasing sequence data:
 Pending
