@@ -1,4 +1,6 @@
+.ipynb_checkpoints
+__pycache__
 */.ipynb_checkpoints/*
 */__pycache__/*
-*/projections/*
-*/model/*
+projections/
+model/*

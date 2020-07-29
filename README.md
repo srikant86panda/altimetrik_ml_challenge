@@ -14,6 +14,17 @@ Solution contains following sections
 
 ### Data Preprocessing
 1. Pre-process file to trim start and end '"', replace '""' with '"' making it ready to be read as pandas data frame.
+or using regex to split the complete row string as:
+```python
+import re
+import pandas as pd
+PATTERN = re.compile(r'''((?:[^,"]|"[^"]*"|'[^']*')+|(?=,,)|(?=,$)|(?=^,))''')
+
+df = pd.read_csv(source_file, encoding='latin1')
+cols = PATTERN.split(df.columns[0])[1::2]
+
+df[cols] = pd.DataFrame(df.iloc[:,0].apply(lambda x: PATTERN.split(x)[1::2]).tolist(), index= df.index)
+```
 2. Checking and removing duplicate rows.
 3. Impute column 'Description': Modify product code with multiple descriptions with most occurrence product code description. Rest impute 'missing_description' for None description.
 4. Impute column 'Customer_ID': Imputing Customer_ID failed with no common transaction id with and without Customer_ID. impute 'missing_cust_id_{invoice number}' for None Customer_ID making all None transaction unique and individual transactions.
