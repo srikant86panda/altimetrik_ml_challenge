@@ -9,7 +9,7 @@ from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 GLOBAL_SEED = 1234
 np.random.seed(GLOBAL_SEED)
 
-def training(model_data, force_train, model_dir, model_load=False, seed=1234, vector_size=None):
+def training(model_data, force_train, model_dir, model_load=False, seed=1234, vector_size=None, epochs=None):
     
     train_corpus = [TaggedDocument(x, [str(y)]) for i, (x, y) in enumerate(model_data[['static_user_profile_list', 'Customer_ID']].values)]
     print(f'train_corpus[0]:{train_corpus[0]}')
@@ -20,7 +20,7 @@ def training(model_data, force_train, model_dir, model_load=False, seed=1234, ve
     vector_size = vector_size if vector_size else fixed_params['vector_size']
     ns_exponent = fixed_params['ns_exponent']
     min_count = fixed_params['min_count']
-    epochs = fixed_params['epochs']
+    epochs = epochs if epochs else fixed_params['epochs']
     alpha = fixed_params['alpha']
     min_alpha = fixed_params['min_alpha']
     seed = fixed_params['seed']
