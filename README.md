@@ -79,8 +79,9 @@ Clustering with K-Means model with units price and frequency of the product base
 * RFM model: Used feature recency, monetary to group users.
 Recency group: Recent user at group 2 and group 1 with non recent users.
 Monetary group: user at group 1 with high revenue generating vs 2 with lessed than group 1.
-1. R1, M1: Group with high revenue generating customers as not very frequent shd be targetted for maximum return. Total number of user 21.
+1. R1, M1: Group with high revenue generating customers as not very frequent shd be targetted for maximum return. Total number of user 21. Should be contacted to understand of them not using platform and take step accordingly.
 2. R1, M2: Group with not generating high revenue that can be ignored for any promotional activity. Total number of user: 844
+3. R2, M1: Group who are frequent with avg spends should be targetted for Buy One Get One promotional activity.
 
 ![RM_Quantiles](https://github.com/srikant86panda/altimetrik_ml_challenge/blob/master/image/RM_Quantiles.JPG)
 
